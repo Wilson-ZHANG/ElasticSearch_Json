@@ -9,7 +9,7 @@ def js_clean2es(filename):
     line = line[:-2]
     i = 1
     while(line):
-        print('{"index":{"_index":"question","_type":"answer","_id":',i,'}}',file=save)
+        print('{"index":{"_index":"hospital_yaozhi","_type":"info","_id":',i,'}}',file=save)
         print(line,file=save)
         i+=1
         print('No',i,'Operation Finished')
@@ -20,7 +20,7 @@ def js_clean2es(filename):
     #print('\n',file=save)
 
 def main():
-    js_clean2es(filename='qa_raw.json')
+    js_clean2es(filename='yaozhi_clean1.json')
 
 if __name__ == '__main__':
     main()
